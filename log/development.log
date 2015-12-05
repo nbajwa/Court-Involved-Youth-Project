@@ -175,3 +175,224 @@ ORDER BY c.conname
   [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (25.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (26.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (12.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (6.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mFacilityType Load (24.9ms)[0m  SELECT  "facility_types".* FROM "facility_types" WHERE "facility_types"."category" = $1 LIMIT 1  [["category", "sexual health"]]
+  [1m[36m (1.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (5.9ms)[0m  INSERT INTO "facility_types" ("category", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["category", "sexual health"], ["created_at", "2015-12-05 05:04:08.115503"], ["updated_at", "2015-12-05 05:04:08.115503"]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (13.7ms)[0m  [1mINSERT INTO "facilities" ("name", "facility_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Community Outreach Intervention Project-Austin"], ["facility_type_id", 1], ["created_at", "2015-12-05 05:04:08.156310"], ["updated_at", "2015-12-05 05:04:08.156310"]]
+  [1m[35m (4.8ms)[0m  COMMIT
+  [1m[36mFacilityType Load (0.7ms)[0m  [1mSELECT  "facility_types".* FROM "facility_types" WHERE "facility_types"."category" = $1 LIMIT 1[0m  [["category", "health center"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "facility_types" ("category", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["category", "health center"], ["created_at", "2015-12-05 05:04:08.179173"], ["updated_at", "2015-12-05 05:04:08.179173"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "facilities" ("name", "website", "facility_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "PCC Wellness Center at Loretto Hospital"], ["website", "www.pccwellness.org"], ["facility_type_id", 2], ["created_at", "2015-12-05 05:04:08.181745"], ["updated_at", "2015-12-05 05:04:08.181745"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mFacilityType Load (0.2ms)[0m  SELECT  "facility_types".* FROM "facility_types" WHERE "facility_types"."category" = $1 LIMIT 1  [["category", "health center"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "facilities" ("name", "website", "facility_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "PCC Austin Family Health Center"], ["website", "www.pccwellness.org"], ["facility_type_id", 2], ["created_at", "2015-12-05 05:04:08.184522"], ["updated_at", "2015-12-05 05:04:08.184522"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mFacilityType Load (0.2ms)[0m  SELECT  "facility_types".* FROM "facility_types" WHERE "facility_types"."category" = $1 LIMIT 1  [["category", "mental and behavioral health "]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "facility_types" ("category", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["category", "mental and behavioral health "], ["created_at", "2015-12-05 05:04:08.186933"], ["updated_at", "2015-12-05 05:04:08.186933"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "facilities" ("name", "website", "facility_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "New Age Services "], ["website", "http://www.newageservices.org/"], ["facility_type_id", 3], ["created_at", "2015-12-05 05:04:08.188829"], ["updated_at", "2015-12-05 05:04:08.188829"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mFacilityType Load (0.2ms)[0m  [1mSELECT  "facility_types".* FROM "facility_types" WHERE "facility_types"."category" = $1 LIMIT 1[0m  [["category", "mental health services"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "facility_types" ("category", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["category", "mental health services"], ["created_at", "2015-12-05 05:04:08.191291"], ["updated_at", "2015-12-05 05:04:08.191291"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "facilities" ("name", "website", "facility_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Hartgrove Hospital"], ["website", "www.hartgrovehospital.com"], ["facility_type_id", 4], ["created_at", "2015-12-05 05:04:08.192993"], ["updated_at", "2015-12-05 05:04:08.192993"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mFacilityType Load (0.2ms)[0m  SELECT  "facility_types".* FROM "facility_types" WHERE "facility_types"."category" = $1 LIMIT 1  [["category", "hospital"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "facility_types" ("category", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["category", "hospital"], ["created_at", "2015-12-05 05:04:08.195432"], ["updated_at", "2015-12-05 05:04:08.195432"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "facilities" ("name", "website", "facility_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Loretto Hospital"], ["website", "www.lorettohospital.org"], ["facility_type_id", 5], ["created_at", "2015-12-05 05:04:08.197151"], ["updated_at", "2015-12-05 05:04:08.197151"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mFacilityType Load (0.1ms)[0m  [1mSELECT  "facility_types".* FROM "facility_types" WHERE "facility_types"."category" = $1 LIMIT 1[0m  [["category", "sexual health"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "facilities" ("name", "website", "facility_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "South Austin STI Specialty Clinic"], ["website", "http://www.cityofchicago.org/city/en/depts/cdph/supp_info/hiv/sti_specialty_clinics.html"], ["facility_type_id", 1], ["created_at", "2015-12-05 05:04:08.199536"], ["updated_at", "2015-12-05 05:04:08.199536"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mFacilityType Load (0.1ms)[0m  [1mSELECT  "facility_types".* FROM "facility_types" WHERE "facility_types"."category" = $1 LIMIT 1[0m  [["category", "sexual health"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "facilities" ("name", "website", "facility_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Planned Parenthood Austin Health Center"], ["website", "http://www.plannedparenthood.org/health-center/illinois/chicago/60651/austin-health-center-2265-90430"], ["facility_type_id", 1], ["created_at", "2015-12-05 05:04:08.201763"], ["updated_at", "2015-12-05 05:04:08.201763"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mFacilityType Load (0.1ms)[0m  [1mSELECT  "facility_types".* FROM "facility_types" WHERE "facility_types"."category" = $1 LIMIT 1[0m  [["category", "social services"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "facility_types" ("category", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["category", "social services"], ["created_at", "2015-12-05 05:04:08.203969"], ["updated_at", "2015-12-05 05:04:08.203969"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "facilities" ("name", "website", "facility_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "The Peace Corner Youth Center"], ["website", "www.thepeacecorner.org"], ["facility_type_id", 6], ["created_at", "2015-12-05 05:04:08.205839"], ["updated_at", "2015-12-05 05:04:08.205839"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mFacilityType Load (0.2ms)[0m  SELECT  "facility_types".* FROM "facility_types" WHERE "facility_types"."category" = $1 LIMIT 1  [["category", "social services"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "facilities" ("name", "website", "facility_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "New Moms, Inc"], ["website", "www.newmomsinc.org"], ["facility_type_id", 6], ["created_at", "2015-12-05 05:04:08.209058"], ["updated_at", "2015-12-05 05:04:08.209058"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mFacilityType Load (0.1ms)[0m  SELECT  "facility_types".* FROM "facility_types" WHERE "facility_types"."category" = $1 LIMIT 1  [["category", "mental and behavioral health services  "]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "facility_types" ("category", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["category", "mental and behavioral health services  "], ["created_at", "2015-12-05 05:04:08.211392"], ["updated_at", "2015-12-05 05:04:08.211392"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "facilities" ("name", "website", "facility_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Gateway Foundation "], ["website", "http://recovergateway.org/drug-rehab-centers/northern-illinois/chicago-west/"], ["facility_type_id", 7], ["created_at", "2015-12-05 05:04:08.213272"], ["updated_at", "2015-12-05 05:04:08.213272"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mFacilityType Load (0.2ms)[0m  [1mSELECT  "facility_types".* FROM "facility_types" WHERE "facility_types"."category" = $1 LIMIT 1[0m  [["category", "housing "]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "facility_types" ("category", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["category", "housing "], ["created_at", "2015-12-05 05:04:08.216472"], ["updated_at", "2015-12-05 05:04:08.216472"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "facilities" ("name", "website", "facility_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Interfaith House"], ["website", "http://interfaithhouse.org/ "], ["facility_type_id", 8], ["created_at", "2015-12-05 05:04:08.218307"], ["updated_at", "2015-12-05 05:04:08.218307"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mFacilityType Load (0.1ms)[0m  SELECT  "facility_types".* FROM "facility_types" WHERE "facility_types"."category" = $1 LIMIT 1  [["category", "social services "]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "facility_types" ("category", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["category", "social services "], ["created_at", "2015-12-05 05:04:08.220772"], ["updated_at", "2015-12-05 05:04:08.220772"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "facilities" ("name", "website", "facility_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mary Crane Center "], ["website", "http://www.marycrane.org/"], ["facility_type_id", 9], ["created_at", "2015-12-05 05:04:08.222449"], ["updated_at", "2015-12-05 05:04:08.222449"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mFacilityType Load (0.1ms)[0m  [1mSELECT  "facility_types".* FROM "facility_types" WHERE "facility_types"."category" = $1 LIMIT 1[0m  [["category", "mental and behavioral health services  "]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "facilities" ("name", "facility_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "I Am Able "], ["facility_type_id", 7], ["created_at", "2015-12-05 05:04:08.224656"], ["updated_at", "2015-12-05 05:04:08.224656"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mFacilityType Load (0.1ms)[0m  [1mSELECT  "facility_types".* FROM "facility_types" WHERE "facility_types"."category" = $1 LIMIT 1[0m  [["category", "social services"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "facilities" ("name", "website", "facility_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Safer Foundation "], ["website", "www.saferfoundation.org"], ["facility_type_id", 6], ["created_at", "2015-12-05 05:04:08.227204"], ["updated_at", "2015-12-05 05:04:08.227204"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mFacilityType Load (0.1ms)[0m  [1mSELECT  "facility_types".* FROM "facility_types" WHERE "facility_types"."category" = $1 LIMIT 1[0m  [["category", "health center"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "facilities" ("name", "website", "facility_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "The Clinic at Altgeld Health, Inc"], ["website", "www.tcahealth.org"], ["facility_type_id", 2], ["created_at", "2015-12-05 05:04:08.229645"], ["updated_at", "2015-12-05 05:04:08.229645"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mFacilityType Load (0.1ms)[0m  [1mSELECT  "facility_types".* FROM "facility_types" WHERE "facility_types"."category" = $1 LIMIT 1[0m  [["category", "health center"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "facilities" ("name", "website", "facility_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Miles Square Health Center"], ["website", "http://hospital.uillinois.edu/Patients_and_Visitors/Mile_Square_-_Federally_Qualified_Health_Center/Locations/South_Shore.html"], ["facility_type_id", 2], ["created_at", "2015-12-05 05:04:08.231709"], ["updated_at", "2015-12-05 05:04:08.231709"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mFacilityType Load (0.2ms)[0m  [1mSELECT  "facility_types".* FROM "facility_types" WHERE "facility_types"."category" = $1 LIMIT 1[0m  [["category", "mental and behavioral health services "]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "facility_types" ("category", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["category", "mental and behavioral health services "], ["created_at", "2015-12-05 05:04:08.234411"], ["updated_at", "2015-12-05 05:04:08.234411"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "facilities" ("name", "website", "facility_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Garfield park Hospital"], ["website", "www.garfieldparkhospital.com"], ["facility_type_id", 10], ["created_at", "2015-12-05 05:04:08.236513"], ["updated_at", "2015-12-05 05:04:08.236513"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mFacilityType Load (0.1ms)[0m  SELECT  "facility_types".* FROM "facility_types" WHERE "facility_types"."category" = $1 LIMIT 1  [["category", "mental and behavioral health services"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "facility_types" ("category", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["category", "mental and behavioral health services"], ["created_at", "2015-12-05 05:04:08.238842"], ["updated_at", "2015-12-05 05:04:08.238842"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "facilities" ("name", "website", "facility_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Metropolitan Family Services"], ["website", "www.metrofamily.org"], ["facility_type_id", 11], ["created_at", "2015-12-05 05:04:08.241008"], ["updated_at", "2015-12-05 05:04:08.241008"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mFacilityType Load (0.2ms)[0m  [1mSELECT  "facility_types".* FROM "facility_types" WHERE "facility_types"."category" = $1 LIMIT 1[0m  [["category", "mental and behavioral health services  "]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "facilities" ("name", "facility_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Garfield Counseling "], ["facility_type_id", 7], ["created_at", "2015-12-05 05:04:08.244698"], ["updated_at", "2015-12-05 05:04:08.244698"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mFacilityType Load (0.1ms)[0m  [1mSELECT  "facility_types".* FROM "facility_types" WHERE "facility_types"."category" = $1 LIMIT 1[0m  [["category", "social services "]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "facilities" ("name", "website", "facility_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Sankofa Safe Child Initiative"], ["website", "www.sankofasafechild.com"], ["facility_type_id", 9], ["created_at", "2015-12-05 05:04:08.247136"], ["updated_at", "2015-12-05 05:04:08.247136"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mFacilityType Load (0.1ms)[0m  [1mSELECT  "facility_types".* FROM "facility_types" WHERE "facility_types"."category" = $1 LIMIT 1[0m  [["category", "health center"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "facilities" ("name", "website", "facility_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Southeast Side Community Health Center"], ["website", "www.auntmarthas.org"], ["facility_type_id", 2], ["created_at", "2015-12-05 05:04:08.249746"], ["updated_at", "2015-12-05 05:04:08.249746"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mFacilityType Load (0.1ms)[0m  [1mSELECT  "facility_types".* FROM "facility_types" WHERE "facility_types"."category" = $1 LIMIT 1[0m  [["category", "health center"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "facilities" ("name", "website", "facility_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Roseland Community Health Center (Aunt Martha's)"], ["website", "www.auntmarthas.org"], ["facility_type_id", 2], ["created_at", "2015-12-05 05:04:08.251911"], ["updated_at", "2015-12-05 05:04:08.251911"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mFacilityType Load (0.1ms)[0m  [1mSELECT  "facility_types".* FROM "facility_types" WHERE "facility_types"."category" = $1 LIMIT 1[0m  [["category", "health center"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "facilities" ("name", "website", "facility_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Healthfirst Access Community Health/ Auburn Gresham"], ["website", "www.accesscommunityhealth.net"], ["facility_type_id", 2], ["created_at", "2015-12-05 05:04:08.253754"], ["updated_at", "2015-12-05 05:04:08.253754"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mFacilityType Load (0.1ms)[0m  [1mSELECT  "facility_types".* FROM "facility_types" WHERE "facility_types"."category" = $1 LIMIT 1[0m  [["category", "hospital "]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "facility_types" ("category", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["category", "hospital "], ["created_at", "2015-12-05 05:04:08.255733"], ["updated_at", "2015-12-05 05:04:08.255733"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "facilities" ("name", "website", "facility_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "South Shore Hospital; Family Medical Center"], ["website", "www.southshorehospital.org"], ["facility_type_id", 12], ["created_at", "2015-12-05 05:04:08.257182"], ["updated_at", "2015-12-05 05:04:08.257182"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mFacilityType Load (0.1ms)[0m  SELECT  "facility_types".* FROM "facility_types" WHERE "facility_types"."category" = $1 LIMIT 1  [["category", "social services  "]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "facility_types" ("category", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["category", "social services  "], ["created_at", "2015-12-05 05:04:08.259102"], ["updated_at", "2015-12-05 05:04:08.259102"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "facilities" ("name", "website", "facility_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Phalanx Family Services "], ["website", "http://www.phalanxgrpservices.org/"], ["facility_type_id", 13], ["created_at", "2015-12-05 05:04:08.260534"], ["updated_at", "2015-12-05 05:04:08.260534"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mFacilityType Load (0.1ms)[0m  [1mSELECT  "facility_types".* FROM "facility_types" WHERE "facility_types"."category" = $1 LIMIT 1[0m  [["category", "health center"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "facilities" ("name", "website", "facility_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "PCC Walk in Wellness Center at Norwegian American Hospital"], ["website", "www.pccwellness.org"], ["facility_type_id", 2], ["created_at", "2015-12-05 05:04:08.262439"], ["updated_at", "2015-12-05 05:04:08.262439"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mFacilityType Load (0.1ms)[0m  [1mSELECT  "facility_types".* FROM "facility_types" WHERE "facility_types"."category" = $1 LIMIT 1[0m  [["category", "social services"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "facilities" ("name", "website", "facility_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Community Assistance Programs "], ["website", "http://www.capsinc.org/#/CAPsINCorg/"], ["facility_type_id", 6], ["created_at", "2015-12-05 05:04:08.264301"], ["updated_at", "2015-12-05 05:04:08.264301"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mFacilityType Load (0.1ms)[0m  [1mSELECT  "facility_types".* FROM "facility_types" WHERE "facility_types"."category" = $1 LIMIT 1[0m  [["category", "health center"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "facilities" ("name", "website", "facility_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Chicago Family Health Center"], ["website", "https://www.chicagofamilyhealth.org/find-a-health-center/pullman-location"], ["facility_type_id", 2], ["created_at", "2015-12-05 05:04:08.266157"], ["updated_at", "2015-12-05 05:04:08.266157"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mFacilityType Load (0.1ms)[0m  [1mSELECT  "facility_types".* FROM "facility_types" WHERE "facility_types"."category" = $1 LIMIT 1[0m  [["category", "health center"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "facilities" ("name", "website", "facility_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Chicago Family Health Center"], ["website", "http://www.chicagofamilyhealth.org/find-a-health-center/south-chicago-location"], ["facility_type_id", 2], ["created_at", "2015-12-05 05:04:08.268096"], ["updated_at", "2015-12-05 05:04:08.268096"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mFacilityType Load (0.1ms)[0m  [1mSELECT  "facility_types".* FROM "facility_types" WHERE "facility_types"."category" = $1 LIMIT 1[0m  [["category", "health center"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "facilities" ("name", "website", "facility_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Chicago Family Health Center"], ["website", "http://www.chicagofamilyhealth.org/find-a-health-center/east-side-location"], ["facility_type_id", 2], ["created_at", "2015-12-05 05:04:08.270137"], ["updated_at", "2015-12-05 05:04:08.270137"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mFacilityType Load (0.1ms)[0m  [1mSELECT  "facility_types".* FROM "facility_types" WHERE "facility_types"."category" = $1 LIMIT 1[0m  [["category", "health center"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "facilities" ("name", "website", "facility_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Chicago Family Health Center"], ["website", "http://www.chicagofamilyhealth.org/find-a-health-center/roseland-location"], ["facility_type_id", 2], ["created_at", "2015-12-05 05:04:08.272239"], ["updated_at", "2015-12-05 05:04:08.272239"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mFacilityType Load (0.1ms)[0m  [1mSELECT  "facility_types".* FROM "facility_types" WHERE "facility_types"."category" = $1 LIMIT 1[0m  [["category", "health center"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "facilities" ("name", "website", "facility_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Chicago Family Health Center"], ["website", "http://www.chicagofamilyhealth.org/find-a-health-center/chicago-lawn-location"], ["facility_type_id", 2], ["created_at", "2015-12-05 05:04:08.274304"], ["updated_at", "2015-12-05 05:04:08.274304"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mFacilityType Load (0.1ms)[0m  [1mSELECT  "facility_types".* FROM "facility_types" WHERE "facility_types"."category" = $1 LIMIT 1[0m  [["category", "health center"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "facilities" ("name", "website", "facility_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Austin Health Center"], ["website", "http://www.cookcountyhhs.org/health-centers/austin-health-center/"], ["facility_type_id", 2], ["created_at", "2015-12-05 05:04:08.276401"], ["updated_at", "2015-12-05 05:04:08.276401"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mFacilityType Load (0.1ms)[0m  [1mSELECT  "facility_types".* FROM "facility_types" WHERE "facility_types"."category" = $1 LIMIT 1[0m  [["category", "mental and behavioral health services "]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "facilities" ("name", "facility_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Bridging the Tys to Jordan "], ["facility_type_id", 10], ["created_at", "2015-12-05 05:04:08.278473"], ["updated_at", "2015-12-05 05:04:08.278473"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mFacilityType Load (0.1ms)[0m  [1mSELECT  "facility_types".* FROM "facility_types" WHERE "facility_types"."category" = $1 LIMIT 1[0m  [["category", "sexual health"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "facilities" ("name", "website", "facility_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "AIDS Foundation of Chicago "], ["website", "www.aidschicago.org"], ["facility_type_id", 1], ["created_at", "2015-12-05 05:04:08.280415"], ["updated_at", "2015-12-05 05:04:08.280415"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mFacilityType Load (0.1ms)[0m  [1mSELECT  "facility_types".* FROM "facility_types" WHERE "facility_types"."category" = $1 LIMIT 1[0m  [["category", "mental and behavioral health services  "]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "facilities" ("name", "facility_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Women's Treatment Center "], ["facility_type_id", 7], ["created_at", "2015-12-05 05:04:08.282315"], ["updated_at", "2015-12-05 05:04:08.282315"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mFacilityType Load (0.1ms)[0m  [1mSELECT  "facility_types".* FROM "facility_types" WHERE "facility_types"."category" = $1 LIMIT 1[0m  [["category", "mental and behavioral health services "]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "facilities" ("name", "website", "facility_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Test Positive Awareness Network "], ["website", "wwww.tpan.com"], ["facility_type_id", 10], ["created_at", "2015-12-05 05:04:08.284276"], ["updated_at", "2015-12-05 05:04:08.284276"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mFacilityType Load (0.1ms)[0m  [1mSELECT  "facility_types".* FROM "facility_types" WHERE "facility_types"."category" = $1 LIMIT 1[0m  [["category", "sexual health"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "facilities" ("name", "website", "facility_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Planned Parenthood Roseland Health Center"], ["website", "http://www.plannedparenthood.org/health-center/illinois/chicago/60628/roseland-center-2263-90430"], ["facility_type_id", 1], ["created_at", "2015-12-05 05:04:08.286176"], ["updated_at", "2015-12-05 05:04:08.286176"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mFacilityType Load (0.1ms)[0m  [1mSELECT  "facility_types".* FROM "facility_types" WHERE "facility_types"."category" = $1 LIMIT 1[0m  [["category", "diversion and intervention "]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "facility_types" ("category", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["category", "diversion and intervention "], ["created_at", "2015-12-05 05:04:08.288350"], ["updated_at", "2015-12-05 05:04:08.288350"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "facilities" ("name", "website", "facility_type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Crushers Club "], ["website", "http://crushersclub.org/"], ["facility_type_id", 14], ["created_at", "2015-12-05 05:04:08.289895"], ["updated_at", "2015-12-05 05:04:08.289895"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[36mFacilityType Load (0.4ms)[0m  [1mSELECT "facility_types".* FROM "facility_types"[0m
+  [1m[35mFacilityType Load (8.9ms)[0m  SELECT  "facility_types".* FROM "facility_types"  ORDER BY "facility_types"."id" ASC LIMIT 1
+  [1m[36mFacilityType Load (0.7ms)[0m  [1mSELECT  "facility_types".* FROM "facility_types"  ORDER BY "facility_types"."id" ASC LIMIT 1[0m
+  [1m[35mFacility Load (0.6ms)[0m  SELECT "facilities".* FROM "facilities"
+  [1m[36mFacility Load (0.6ms)[0m  [1mSELECT  "facilities".* FROM "facilities"  ORDER BY "facilities"."id" ASC LIMIT 1[0m
