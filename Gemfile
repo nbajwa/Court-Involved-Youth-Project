@@ -24,6 +24,13 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'geocoder'
+
+# gem 'spreadsheet', '~> 1.0.7'
+gem 'roo'
+
+gem 'google_drive', '~> 1.0', '>= 1.0.2'
+gem 'roo-google', '~> 1.0'
+gem 'annotate'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
