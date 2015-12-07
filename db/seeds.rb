@@ -28,8 +28,8 @@ ex.default_sheet = ex.sheets[1]
   cta_bus_transit = ex.cell(line,'AM')
   cta_train_transit = ex.cell(line,'AN')
   parking = ex.cell(line,'AL')
-
-
+  required = ex.cell(line,'G')
+  listed_requirments =(line,'F')
 
 
     
@@ -39,9 +39,7 @@ ex.default_sheet = ex.sheets[1]
   
   @facility_branch = FacilityBranch.create( address: address, telephone_number: telephone_number, languages: languages, payment_options: payment_options, co_pay_requirment: co_pay_requirment,cta_bus_transit: cta_bus_transit, cta_train_transit:cta_train_transit, parking: praking, facility_id: @facility.id)
 
-  @documents = Document.create(facility_branch_id: @facility_branch.id)
-    
-
+  @documents = Document.create(required: listed_requirments: listed_requirments,required: required, facility_branch_id: @facility_branch.id)
 
 end
 
