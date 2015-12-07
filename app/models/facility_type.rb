@@ -10,4 +10,20 @@
 
 class FacilityType < ActiveRecord::Base
   has_many :categories
+
+
+
+
+def as_json(options={})
+  super,
+        :include => {
+          :facility => {:only => [:title]},
+          :include=> {:only => [:name]}
+        }
+  )
+end
+
+
+
+
 end
