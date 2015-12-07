@@ -23,6 +23,7 @@ class FacilityBranch < ActiveRecord::Base
   after_validation :geocode  
   belongs_to :facility 
   has_many :documents 
-  has_many :services, through :facility_services
+  has_many :facility_services
+  has_many :services, through: :facility_services
 
 end
