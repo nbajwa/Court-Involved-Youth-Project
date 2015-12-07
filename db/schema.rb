@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20151020220954) do
   create_table "facility_branches", force: :cascade do |t|
     t.float    "latitude"
     t.float    "longitude"
+    t.string   "languages"
     t.string   "telephone_number"
     t.string   "payment_options"
     t.boolean  "co_pay_requirment"
@@ -58,8 +59,9 @@ ActiveRecord::Schema.define(version: 20151020220954) do
     t.string   "name"
     t.boolean  "available"
     t.string   "additonal_notes"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.integer  "facility_branch_id"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
 end
