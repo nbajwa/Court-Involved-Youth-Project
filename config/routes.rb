@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
   
-   resources :facility_types
-    resources :facilities
-    resources :facility_branches
-    resources :services 
-  
+ resources :facility_types, only: :index do
+      resources :facilities, only: :index do
+        resources :facility_branches, only: :index do
+        resources :services,only: :index
+        
+        end
+    end 
+  end 
 
- 
+
    # Example resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales

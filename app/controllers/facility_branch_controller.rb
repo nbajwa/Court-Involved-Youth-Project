@@ -1,0 +1,2 @@
+class FacilityBranchController < ApplicationController
+end
