@@ -29,7 +29,25 @@ ex.default_sheet = ex.sheets[1]
   cta_train_transit = ex.cell(line,'AN')
   parking = ex.cell(line,'AL')
   required = ex.cell(line,'G')
-  listed_requirments= ex.cell(line,'F')
+  listed_requirments = ex.cell(line,'F')
+  undocumented_youth_requirments = ex.cell(line,'AJ')
+  additonal_notes = ex.cell(line,'AK')
+  substance_abuse_treatment_available = ex.cell(line,'K')
+  sexual_reproductive_health_care_available = ex.cell(line,'L')
+  hiv_testing_available = ex.cell(line,'M')
+  sti_testing_available = ex.cell(line,'N')
+  general_practice_care_available = ex.cell(line,'O')
+  dental_available = ex.cell(line,'P')
+  vision_available = ex.cell(line,'Q')
+  abortion_services_available = ex.cell(line,'R')
+  prenatal_healthcare_available = ex.cell(line,'S')
+  mental_health_care_available = ex.cell(line,'T')
+  prescribe_psychiatric_medication_available = ex.cell(line,'U')
+  preventitive_care_available = ex.cell(line,'V')
+  preventitive_care = ex.cell(line,'W')
+  pharmacy = ex.cell(line,'X')
+
+
 
 
     
@@ -41,8 +59,8 @@ ex.default_sheet = ex.sheets[1]
 
   @documents = Document.create(listed_requirments: listed_requirments, required: required, facility_branch_id: @facility_branch.id)
 
+  @facility.facility_services.create(substance_abuse_treatment: substance_abuse_treatment)
 end
 
-servixe_repro_sexual = Service.create(name: , facility_branch_id: @facility_branch.id)
 
 
