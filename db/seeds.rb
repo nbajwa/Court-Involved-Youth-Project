@@ -17,7 +17,7 @@ puts ex.sheets
 ex.default_sheet = ex.sheets[1]
 2.upto(41) do | line |
   name = ex.cell(line,'A')
-  street_address = ex.cell(line,'B')
+  address = ex.cell(line,'B')
   category = ex.cell(line,'C') # facility_type_name
   telephone_number = ex.cell(line,'E')
   languages = ex.cell(line,'I')
@@ -31,15 +31,16 @@ ex.default_sheet = ex.sheets[1]
 
 
 
+
     
   @facility_type = FacilityType.find_or_create_by(category: category.downcase)
 
   @facility = Facility.create(name: name, website: website, facility_type_id: @facility_type.id) 
   
-  @facility_branch = FacilityBranch.create(telephone_number: telephone_number, languages: languages, payment_options: payment_options, co_pay_requirment: co_pay_requirment,cta_bus_transit: cta_bus_transit, cta_train_transit:cta_train_transit, parking: praking, facility_id: @facility.id)
+  @facility_branch = FacilityBranch.create( address: address, telephone_number: telephone_number, languages: languages, payment_options: payment_options, co_pay_requirment: co_pay_requirment,cta_bus_transit: cta_bus_transit, cta_train_transit:cta_train_transit, parking: praking, facility_id: @facility.id)
 
-
-
+  @documents = Document.create(facility_branch_id: @facility_branch.id)
+    
 
 
 end
