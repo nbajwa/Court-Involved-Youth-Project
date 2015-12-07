@@ -11,5 +11,5 @@
 #
 
 class Facility < ActiveRecord::Base
-  
+  has_many :facility_branches
 end
