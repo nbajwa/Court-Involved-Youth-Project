@@ -11,5 +11,5 @@
 #
 
 class Service < ActiveRecord::Base
-  belongs_to :facility 
+  belongs_to :facility_branch
 end

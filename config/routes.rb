@@ -1,7 +1,17 @@
 Rails.application.routes.draw do
   
-   
+   resources :facility_types
+    resources :facilities
+    resources :facility_branches
+    resources :services 
+  
+
  
+   # Example resource route with sub-resources:
+  #   resources :products do
+  #     resources :comments, :sales
+  #     resource :seller
+  #   end
 
 
 
