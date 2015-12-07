@@ -14,14 +14,14 @@ class FacilityType < ActiveRecord::Base
 
 
 
-def as_json(options={})
-  super,
-        :include => {
-          :facility => {:only => [:title]},
-          :include=> {:only => [:name]}
-        }
-  )
-end
+# def as_json(options={})
+#   super,
+#         :include => {
+#           :facility => {:only => [:title]},
+#           :include=> {:only => [:name]}
+#         }
+#   )
+# end
 
 
 
