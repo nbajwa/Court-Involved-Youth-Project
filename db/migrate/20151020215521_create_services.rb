@@ -4,7 +4,7 @@ class CreateServices < ActiveRecord::Migration
       t.string :name
       t.boolean :available
       t.string :additonal_notes
-      t.integer :facility_bracnch_id
+      t.integer :facility_branch_id
       t.timestamps null: false
     end
   end

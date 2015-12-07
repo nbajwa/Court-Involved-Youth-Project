@@ -3,6 +3,7 @@ class CreateFacilityBranches < ActiveRecord::Migration
     create_table :facility_branches do |t|
       t.float :latitude
       t.float :longitude
+      t.string :languages
       t.string :telephone_number
       t.string :payment_options
       t.boolean :co_pay_requirment
