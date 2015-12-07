@@ -11,5 +11,13 @@
 #
 
 class Service < ActiveRecord::Base
-  belongs_to :facility_branch
+  has_many :facility_branches, through :facility_services
+
+
+def boolean_to_words(value)
+  value ? "Yes" : "No"
+end
+
+
+
 end
