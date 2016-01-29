@@ -11,4 +11,6 @@
 #
 
 class Service < ActiveRecord::Base
+  has_many :facility_branches, through: :facility_services
+
 end

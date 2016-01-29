@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151020220954) do
+ActiveRecord::Schema.define(version: 20151207173209) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,10 +43,19 @@ ActiveRecord::Schema.define(version: 20151020220954) do
     t.string   "cta_bus_transit"
     t.string   "cta_train_transit"
     t.string   "parking"
+    t.string   "additonal_notes"
     t.integer  "facility_id"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.string   "undocumented_youth_requirments"
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
     t.string   "address"
+  end
+
+  create_table "facility_services", force: :cascade do |t|
+    t.integer  "facility_branch_id"
+    t.integer  "service_id"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
   create_table "facility_types", force: :cascade do |t|
@@ -56,12 +65,22 @@ ActiveRecord::Schema.define(version: 20151020220954) do
   end
 
   create_table "services", force: :cascade do |t|
-    t.string   "name"
-    t.boolean  "available"
-    t.string   "additonal_notes"
-    t.integer  "facility_branch_id"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.string   "substance_abuse_treatment_available"
+    t.string   "sexual_reproductive_health_care_available"
+    t.string   "hiv_testing_available"
+    t.string   "mental_health_care_available"
+    t.string   "sti_testing_available"
+    t.string   "general_practice_care_available"
+    t.string   "dental_available"
+    t.string   "vision_available"
+    t.string   "abortion_services_available"
+    t.string   "prenatal_healthcare_available"
+    t.string   "prescribe_psychiatric_medication_available"
+    t.string   "preventitive_care_available"
+    t.string   "preventitive_care"
+    t.string   "pharmacy"
+    t.datetime "created_at",                                 null: false
+    t.datetime "updated_at",                                 null: false
   end
 
 end

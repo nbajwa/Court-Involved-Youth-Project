@@ -18,8 +18,12 @@
 #
 
 class FacilityBranch < ActiveRecord::Base
+  
   geocoded_by :address
   after_validation :geocode  
-
+  belongs_to :facility 
+  has_many :documents 
+  has_many :facility_services
+  has_many :services, through: :facility_services
 
 end

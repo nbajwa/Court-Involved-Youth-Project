@@ -11,7 +11,9 @@ class CreateFacilityBranches < ActiveRecord::Migration
       t.string :cta_bus_transit
       t.string :cta_train_transit
       t.string :parking 
-      t.integer :facility_id 
+      t.string :additonal_notes
+      t.integer :facility_id
+      t.string :undocumented_youth_requirments
 
       t.timestamps null: false
     end
