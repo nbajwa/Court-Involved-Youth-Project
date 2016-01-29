@@ -31,7 +31,7 @@ gem 'roo'
 gem 'google_drive', '~> 1.0', '>= 1.0.2'
 gem 'roo-google', '~> 1.0'
 gem 'annotate'
-gem 'rails-api'
+# gem 'rails-api'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
