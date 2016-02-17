@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 20151207173209) do
     t.string   "additonal_notes"
     t.integer  "facility_id"
     t.string   "undocumented_youth_requirments"
+    t.string   "hours"
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
     t.string   "address"
