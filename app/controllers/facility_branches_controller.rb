@@ -1,4 +1,4 @@
-class FacilityBranchController < ApplicationController
+class FacilityBranchesController < ApplicationController
 
 
   def index
