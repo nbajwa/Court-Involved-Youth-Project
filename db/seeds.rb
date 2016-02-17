@@ -17,6 +17,7 @@ puts ex.sheets
 ex.default_sheet = ex.sheets[1]
 2.upto(41) do | line |
   name = ex.cell(line,'A')
+  hours = ex.cell(line,'D')
   address = ex.cell(line,'B')
   category = ex.cell(line,'C') # facility_type_name
   telephone_number = ex.cell(line,'E')

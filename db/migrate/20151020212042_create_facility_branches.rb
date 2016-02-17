@@ -14,6 +14,7 @@ class CreateFacilityBranches < ActiveRecord::Migration
       t.string :additonal_notes
       t.integer :facility_id
       t.string :undocumented_youth_requirments
+      t.string :hours
 
       t.timestamps null: false
     end
