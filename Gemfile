@@ -27,6 +27,7 @@ gem 'geocoder'
 
 # gem 'spreadsheet', '~> 1.0.7'
 gem 'roo'
+gem 'active_model_serializers'
 
 gem 'google_drive', '~> 1.0', '>= 1.0.2'
 gem 'roo-google', '~> 1.0'
