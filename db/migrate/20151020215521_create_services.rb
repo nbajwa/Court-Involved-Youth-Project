@@ -15,6 +15,16 @@ class CreateServices < ActiveRecord::Migration
       t.string :preventitive_care_available
       t.string :preventitive_care
       t.string :pharmacy
+      t.string :work_with_lgbtq
+      t.string :sogi_competence_training
+      t.string :utilize_trauma_framework
+      t.string :trauma_informed
+      t.string :any_religious_affiliation
+      t.string :full_range_comprehensive_sexual_health_available
+      t.string :title_x_funding 
+      t.string :requirements_for_undocumented_clients_to_receive_care
+      t.string :notes
+
       
       t.timestamps null: false
     end

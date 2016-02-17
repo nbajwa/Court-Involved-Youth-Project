@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   
+  get 'controller/FacilityType'
+
+  get 'controller/new'
+
+  get 'controller/create'
+
  resources :facility_types, only: :index do
       resources :facilities, only: :index do
         resources :facility_branches, only: :index do

@@ -10,6 +10,7 @@
 
 class FacilityType < ActiveRecord::Base
   has_many :categories
+  has_many :facilities
 
 
 

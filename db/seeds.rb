@@ -46,6 +46,16 @@ ex.default_sheet = ex.sheets[1]
   preventitive_care_available = ex.cell(line,'V')
   preventitive_care = ex.cell(line,'W')
   pharmacy = ex.cell(line,'X')
+  notes = ex.cell(line,'AK')
+  requirements_for_undocumented_clients_to_receive_care = ex.cell(line,'AJ')
+  title_x_funding = ex.cell(line,'AI')
+  full_range_comprehensive_sexual_health_available = ex.cell(line,'AF')
+  any_religious_affiliation = ex.cell(line,'AH')
+  trauma_informed = ex.cell(line,'AE')
+  utilize_trauma_framework = ex.cell(line,'AD')
+  sogi_competence_training = ex.cell(line,'AB')
+  work_with_lgbtq = ex.cell(line,'AC')
+
 
 
 
@@ -59,7 +69,7 @@ ex.default_sheet = ex.sheets[1]
 
   @documents = Document.create(listed_requirments: listed_requirments, required: required, facility_branch_id: @facility_branch.id)
 
-  @facility_branch.services.create(substance_abuse_treatment_available: substance_abuse_treatment_available, sexual_reproductive_health_care_available: sexual_reproductive_health_care_available, hiv_testing_available:hiv_testing_available, sti_testing_available: sti_testing_available, general_practice_care_available: general_practice_care_available, dental_available: dental_available, vision_available: vision_available, abortion_services_available: abortion_services_available, prenatal_healthcare_available: prenatal_healthcare_available, mental_health_care_available: mental_health_care_available, prescribe_psychiatric_medication_available: prescribe_psychiatric_medication_available, preventitive_care_available:  preventitive_care_available, preventitive_care: preventitive_care, pharmacy:pharmacy)
+  @facility_branch.services.create(substance_abuse_treatment_available:substance_abuse_treatment_available, sexual_reproductive_health_care_available: sexual_reproductive_health_care_available, hiv_testing_available:hiv_testing_available, sti_testing_available: sti_testing_available, general_practice_care_available: general_practice_care_available, dental_available: dental_available, vision_available: vision_available, abortion_services_available: abortion_services_available, prenatal_healthcare_available: prenatal_healthcare_available, mental_health_care_available: mental_health_care_available, prescribe_psychiatric_medication_available: prescribe_psychiatric_medication_available, preventitive_care_available:  preventitive_care_available, preventitive_care: preventitive_care, pharmacy:pharmacy, notes: notes, requirements_for_undocumented_clients_to_receive_care:requirements_for_undocumented_clients_to_receive_care, title_x_funding:title_x_funding,full_range_comprehensive_sexual_health_available: full_range_comprehensive_sexual_health_available, any_religious_affiliation: any_religious_affiliation, trauma_informed: trauma_informed, utilize_trauma_framework: utilize_trauma_framework,sogi_competence_training: sogi_competence_training, work_with_lgbtq: work_with_lgbtq)
 end
 
 

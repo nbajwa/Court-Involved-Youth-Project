@@ -1,6 +1,6 @@
-class ApplicationController < ActionController::API
+class ApplicationController < ActionController::Base
 
-  include ActionController::Serialization
+  # include ActionController::Serialization
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
 end
